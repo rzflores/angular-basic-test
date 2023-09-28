@@ -5,8 +5,12 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "del:docs" : "del docs",
+    "copy:dist" : "copyfiles dist/contador-app/* ./docs -f",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:github": "npm run del:docs && npm run build:href && npm run copy:dist"
   },
   "private": true,
   "dependencies": {
