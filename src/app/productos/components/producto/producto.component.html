@@ -1,0 +1,38 @@
+
+<dl>
+<td>
+    Nombre:
+</td>
+<dd>
+    {{ nombreUpper  }}
+</dd>
+
+<td>
+    Precio:
+</td>
+<dd>
+    {{ precio }}
+</dd>
+
+<td>
+    Descripcion:
+</td>
+<dd>
+    {{ descripcion }}
+</dd>
+<td>
+    Metodo Concatenar:
+</td>
+<dd>
+    {{ getConcatenacion() }}
+</dd>
+</dl>
+<button (click)="cambiarPrecio()" 
+        class="btn btn-success"
+        *ngIf="mostarBoton1"
+        >Cambiar Precio</button>
+<br>
+<br>
+<button (click)="cambiarNombre()"
+        *ngIf="mostarBoton2" 
+        class="btn btn-success">Cambiar Nombre</button>

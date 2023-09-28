@@ -1,0 +1,12 @@
+<h1>Main page auth</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <auth-list 
+        (onEventDeleteItem)="deleteItem($event)"  
+        [Perfiles]="listadoPerfiles"></auth-list>
+    </div>
+    <div class="col">
+        <auth-add-perfil (onEventNewItem)="newItem($event)"></auth-add-perfil>
+    </div>
+</div>

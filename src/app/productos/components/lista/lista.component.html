@@ -1,0 +1,19 @@
+<h1>Listado de productos</h1>
+
+<div *ngIf="elementoBorrado; else templateNoBorro">
+<h3>Heroe borrado <small class="text-danger"> {{ elementoBorrado }} </small></h3>
+</div>
+
+<ng-template #templateNoBorro>
+    <h3> No se borro nada </h3>
+</ng-template>
+
+<button 
+class="btn btn-danger"
+*ngIf="listaProducto.length > 0" 
+(click)="borrarHeroe()" >Borrar
+</button>
+
+<ul>
+    <li *ngFor="let item of listaProducto">{{ item }}</li>
+</ul>

@@ -1,0 +1,26 @@
+<form
+    (ngSubmit)="emitItem()"
+    >
+    <input 
+        type="text" 
+        class="form-control mb-2" 
+        placeholder="perfil"
+        [(ngModel)]= "item.nombre" 
+        name="nombre"        
+        >
+    <input 
+        type="number" 
+        class="form-control mb-2" 
+        placeholder="numero"
+        [(ngModel)]= "item.numero" 
+        name="numero"
+        
+    >
+    <button 
+        type="submit" 
+        class="btn btn-primary" 
+    >Agregar</button>
+
+
+    <!-- <pre>{{ item | json }}</pre> -->
+</form>
